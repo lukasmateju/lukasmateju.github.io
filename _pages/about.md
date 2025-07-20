@@ -1,37 +1,43 @@
 ---
-layout: about
+layout: about-custom
 title: about
 permalink: /
+
 subtitle: >
-  <p style="font-size: 14px; margin-bottom: 5px;">
-    <strong>Email:</strong> lmateju@umich.edu | lmateju@lanl.gov | lukas.mateju04@gmail.com
-  </p>
-  <p style="font-size: 14px; margin-bottom: 5px;">
-    <strong>Mobile:</strong> 1 (616) 635-4375 &nbsp; <strong>Work:</strong> 1 (505) 660-5683
-  </p>
-  <p style="font-size: 14px;">Ann Arbor, MI</p>
+  Undergraduate Student at the University of Michigan - Ann Arbor
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Industrial and Operations Engineering&nbsp;&nbsp;|&nbsp;&nbsp;Computer Science</p>
 
 profile:
   align: right
   image: Headshot_F24.png
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>lmateju@umich.edu | lmateju@lanl.gov | lukas.mateju04@gmail.com</p>
-    <p>Mobile: 1 (616) 635-4375 | Work: 1 (505) 660-5683</p>
-    <p>Ann Arbor, MI</p>
+    <p><div><strong>Email:</strong> 
+      <a href="mailto:lmateju@umich.edu">lmateju@umich.edu</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:lukas.mateju04@gmail.com">lukas.mateju04@gmail.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:lmateju@lanl.gov">lmateju@lanl.gov</a>
+    </div>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+    <div style="margin-top: 0.35rem;"><strong>
+    Mobile:</strong> <a href="tel:+16166354375">1 (616) 635-4375</a> &nbsp;&nbsp;
+    <strong>
+    Work:</strong> <a href="tel:+15056605683">1 (505) 660-5683</a>
+    </div></p>
+
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
-  limit: 3 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: false
+  limit: 3
 
 latest_posts:
   enabled: true
-  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: false
+  limit: 3
 ---
 
-Hey my name is Lukas and I'm testing to see if my code is working
+I’m Lukas, an undergraduate student passionate about operations research, systems engineering, and building digital tools that streamline life.
+
+I’m currently working on personal website development, Raspberry Pi-based media projects, and exploring optimization through coursework and projects.

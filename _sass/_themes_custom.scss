@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * ADDED: Custom colors
+ ******************************************************************************/
+
+// Day theme colors
+$day-color-main:             #0d47a1 !default;                         
+$day-color-hover:            #1976d2 !default;                         
+
+// Night theme colors
+$night-background-color:     $black-color !default;                         
+$night-color-main:           #2ce0a1 !default;
+$night-color-hover:          darken($night-color-main, 10%); 
+$night-card-color:           #212121 !default;
+
+
+/*******************************************************************************
+ * ADDED: Custom theme
+ ******************************************************************************/
+
+ :root{
+  --global-theme-color: #{$day-color-main};
+  --global-hover-color: #{$day-color-hover};
+  --global-footer-bg-color: #{$white-color};
+  --global-footer-text-color: #{$grey-color};
+  --global-footer-link-color: #{$day-color-main};
+  --global-divider-color: #{$day-color-main};
+ }
+
+ html[data-theme="dark"] {
+  --global-bg-color: #{$night-background-color};
+  --global-theme-color: #{$night-color-main};
+  --global-hover-color: #{$night-color-hover};
+  --global-footer-bg-color: #{$night-background-color};
+  --global-footer-text-color: #{$grey-color-light};
+  --global-footer-link-color: #{$night-color-main};
+  --global-divider-color: #{$night-color-main};
+  --global-card-bg-color: #{$night-card-color};
+ }

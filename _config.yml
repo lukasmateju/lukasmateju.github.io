@@ -7,7 +7,7 @@ first_name: Lukas
 middle_name: 
 last_name: Mateju
 contact_note: >
-  Email is the best way to reach me, but you can also find me on LinkedIn.
+
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Academic, professional, and personal project portfolio for Lukas Mateju. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -52,7 +52,7 @@ posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 1250px
+max_width: 1100px
 
 # TODO: add layout settings (single page vs. multi-page)
 

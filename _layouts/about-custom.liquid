@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="post">
+  <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+    {% if page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      {% assign profile_image_class = "img-fluid z-depth-1 rounded-lg" %}
+      {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+      {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
+    {% endif %}
+  </div>
+
+  <h1 class="post-title" style="margin-left: 1.5rem;">
+    <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.last_name }}
+    <small style="font-size: 1rem; color: var(--global-text-color-light); margin-left: 0.5rem;">he/him</small>
+  </h1>
+
+  <div class="about-box">
+    <p class="subtitle">{{ page.subtitle }}</p>
+
+    {% if page.profile.more_info %}
+      <div class="more-info"> {{ page.profile.more_info }} </div>
+    {% endif %}
+
+    {% if page.social %}
+      <div class="social" style="text-align: center;">
+        <div class="contact-icons" style="font-size: 2rem;">{% include social.liquid %}</div>
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+  </div>
+
+  </header>
+
+  <article>
+    <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">About Me</h2>
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% include newsletter.liquid center=true %}
+    {% endif %}
+  </article>
+</div>
