@@ -469,11 +469,11 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6C%6D%61%74%65%6A%75@%75%6D%69%63%68.%65%64%75", "_blank");
+          window.open("https://www.linkedin.com/in/lukas-mateju", "_blank");
         },
       },{
         id: 'social-github',
@@ -490,25 +490,32 @@ ninja.data = [{
           window.open("https://instagram.com/lukasmateju_", "_blank");
         },
       },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/lukas-mateju", "_blank");
-        },
-      },{
-        id: 'social-whatsapp',
-        title: 'whatsapp',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://wa.me/16166354375", "_blank");
-        },
-      },{
         id: 'social-youtube',
         title: 'YouTube',
         section: 'Socials',
         handler: () => {
           window.open("https://youtube.com/@www.youtube.com/@LukasMateju_", "_blank");
+        },
+      },{
+        id: 'social-spotify',
+        title: 'Spotify',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://open.spotify.com/user/digrkwo3c9g0keloxyaaf0gpm?si=88025444254f410c", "_blank");
+        },
+      },{
+        id: 'social-letterboxed',
+        title: 'Letterboxed',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
+        },
+      },{
+        id: 'social-discogs',
+        title: 'Discogs',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
         },
       },{
       id: 'light-theme',
