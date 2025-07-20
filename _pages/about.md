@@ -3,8 +3,13 @@ layout: about
 title: about
 permalink: /
 subtitle: >
-  <p>Undergraduate Student at the <a href="https://umich.edu" target="_blank" rel="noopener noreferrer">University of Michigan</a></p>
-  <p>Industrial and Operations Engineering Major, Computer Science Minor</p>
+  <p style="font-size: 14px; margin-bottom: 5px;">
+    <strong>Email:</strong> lmateju@umich.edu | lmateju@lanl.gov | lukas.mateju04@gmail.com
+  </p>
+  <p style="font-size: 14px; margin-bottom: 5px;">
+    <strong>Mobile:</strong> 1 (616) 635-4375 &nbsp; <strong>Work:</strong> 1 (505) 660-5683
+  </p>
+  <p style="font-size: 14px;">Ann Arbor, MI</p>
 
 profile:
   align: right
