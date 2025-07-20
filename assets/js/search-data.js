@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-posts",
-          title: "posts",
-          description: "",
+  },{id: "nav-cv",
+          title: "cv",
+          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/posts/index.html";
+            window.location.href = "/cv/";
           },
         },{id: "nav-projects",
           title: "projects",
@@ -23,12 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+        },{id: "nav-posts",
+          title: "posts",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/posts/index.html";
+          },
+        },{id: "nav-media",
+          title: "media",
+          description: "A growing collection some media",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/media/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
