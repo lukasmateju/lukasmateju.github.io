@@ -5,8 +5,7 @@ permalink: /
 
 subtitle: >
   Undergraduate Student at the University of Michigan - Ann Arbor
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Industrial and Operations Engineering&nbsp;&nbsp;|&nbsp;&nbsp;Computer Science</p>
+  <div>Industrial and Operations Engineering&nbsp;&nbsp;|&nbsp;&nbsp;Computer Science</div>
 
 profile:
   align: right
@@ -28,14 +27,14 @@ profile:
 social: true
 
 announcements:
-  enabled: true
+  enabled: false
   scrollable: false
   limit: 3
 
 latest_posts:
   enabled: true
-  scrollable: false
-  limit: 3
+  scrollable: true
+  limit: 5
 ---
 
 I’m Lukas, an undergraduate student passionate about operations research, systems engineering, and building digital tools that streamline life.
