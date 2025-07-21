@@ -3,53 +3,60 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "about",
+    id: "nav-home",
+    title: "Home",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+  },{id: "nav-resume",
+          title: "Resume",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/resume/";
           },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "A growing collection of your cool projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
           },
         },{id: "nav-posts",
-          title: "posts",
+          title: "Posts",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/posts/index.html";
           },
-        },{id: "nav-media",
-          title: "media",
-          description: "A growing collection some media",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/media/";
-          },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
+        },{id: "dropdown-tbd",
+              title: "TBD",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/books/";
+                window.location.href = "";
               },
-            },{id: "dropdown-posts",
-              title: "posts",
+            },{id: "dropdown-tbd",
+              title: "TBD",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/posts/";
+                window.location.href = "";
+              },
+            },{id: "dropdown-media",
+              title: "Media",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/media/";
+              },
+            },{id: "dropdown-games",
+              title: "Games",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/games/";
               },
             },{id: "post-a-post-with-plotly-js",
         
