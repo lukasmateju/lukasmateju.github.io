@@ -1,10 +1,10 @@
 ---
 layout: page
-title: media
-permalink: /media/
-description: A growing collection some media
+title: Projects
+permalink: /projects/
+description: A growing collection of your cool projects.
 nav: true
-nav_order: 4
+nav_order: 1
 display_categories: [work, fun]
 horizontal: false
 ---

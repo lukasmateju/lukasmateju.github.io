@@ -1,26 +1,29 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "name": "Lukas Mateju",
+    "label": "Industrial & Operations Engineering Student",
+    "email": "lmateju@umich.edu",
+    "phone": "(616) 635-4375",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "city": "Ann Arbor",
+      "region": "MI",
+      "postalCode": "48104",
+      "countryCode": "US"
     },
+    "url": "https://lukasmateju.github.io",
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "GitHub",
+        "username": "lukasmateju",
+        "url": "https://github.com/lukasmateju"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "lukas-mateju",
+        "url": "https://linkedin.com/in/lukas-mateju"
       }
-    ]
+    ],
+    "summary": "To be filled in"
   },
   "work": [
     {

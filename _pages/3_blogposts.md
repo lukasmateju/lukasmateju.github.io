@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /posts/
-title: posts
+title: Posts
 nav: true
-nav_order: 3
+nav_order: 2
 pagination:
   enabled: true
   collection: posts

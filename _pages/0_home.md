@@ -1,6 +1,7 @@
 ---
 layout: about-custom
-title: about
+title: Home
+nav: false
 permalink: /
 
 subtitle: >
@@ -39,7 +40,7 @@ latest_posts:
 
 <p>
   <div>
-    Officially I started my degree two years ago, but my path with engineering started back when I was a kid playing with legos wanting to build more. From there I’ve had the privilege of participating in competitive robotics from elementary school to today, picking up new skills along the way. 
+    Officially, I began my degree two years ago, but my journey with engineering began when I was a kid, building with Legos and always wanting to create more. From there I’ve had the privilege of participating in competitive robotics from elementary school to today, picking up new skills along the way. 
   </div>
   <div style="margin-top: 0.5rem;">
     Through various job shadows, an internship at 
