@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Resume Template</title>
+  <style>
+    /* Global Base Styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      height: auto;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+      font-size: 11pt;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      max-width: 800px;
+      background: white;
+      color: black;
+    }
+
+    /* Name Header */
+    .name-header {
+      text-align: center;
+      font-size: 24pt;        /* Customize size */
+      margin: 0.25em 0 0 0;    /* Customize top/right/bottom/left margins */
+      padding: 0;              /* Customize padding if needed */
+    }
+
+    /* Contact Line */
+    .contact-line {
+      text-align: center;
+      font-size: 12pt;               /* Customize size */
+      color: #434343;                /* Customize text color */
+      margin: 0.2em 0 0.8em 0;       /* Customize spacing */
+    }
+    .contact-line a {
+      color: #434343;                /* Link color */
+      text-decoration: none;
+    }
+    .contact-line .pipe {
+      font-weight: normal;           /* Customize pipe weight/style */
+      padding: 0 0.5em;              /* Space around | character */
+    }
+
+    /* Section Header (e.g., EDUCATION, WORK EXPERIENCE) */
+    .section-header {
+      font-size: 14pt;               /* Customize size */
+      font-weight: bold;
+      border-bottom: 1.5px solid black;
+      padding-bottom: 0.0em;         /* Space between text and line */
+      margin-top: 0.2em;
+      margin-bottom: 0.0em;            /* Space after underline */
+    }
+
+
+    .experience-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 0em;
+      margin-bottom: 0.0em;
+      padding: 0;
+    }   
+
+    .experience-header-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 0em;
+      margin-bottom: 0.0em;
+      padding: 0;
+    }
+
+    .experience-header-top-L {
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    .experience-header-top-R {
+      font-size: 11pt;
+      font-style: italic;
+      color: #434343;
+      white-space: nowrap;
+    }
+
+    .experience-header-bottom-L {
+      font-size: 11.5pt;
+      font-style: italic;              
+    }
+    .experience-header-bottom-R {
+      font-size: 11pt;
+      font-style: italic;          
+      color: #434343;
+      white-space: nowrap;    
+    }
+
+    /* Bulleted List */
+    .bullet-section ul {
+      list-style-type: disc;
+      margin-left: 2.8em;
+      padding-left: 0.0em;
+      padding-top: 0.0em;
+      padding-bottom: 0.0em;
+      margin-top: 0.0em;
+    }
+    .bullet-section li {
+      position: relative;
+      padding-left: 0.5em;     /* adjust this: controls distance from bullet to text */
+      margin-top: -0.2em;           /* removes space above */
+      margin-bottom: -0.2em;    /* reduce space between bullets */
+      font-size: 11pt;
+    }
+    .bullet-section li::marker {
+      font-size: 16pt;
+    }
+    .bullet-section li:last-child {
+      margin-bottom: -0.6em; /* or even 0 */
+    }
+
+    /* Additional Info Section (no bullets) */
+    .additional-info {
+      margin-top: 0.0em;
+      margin-left: 0.0em;
+    }
+    .additional-info p {
+      font-size: 11pt;
+      margin-top: 0.1em;
+      margin-bottom: 0.5em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!------------------- NAME HEADER  ------------------->
+  <div class="name-header">
+    <strong>Lukas Mateju</strong>
+  </div>
+
+  <!----------- CONTACT LINE  ----------->
+  <div class="contact-line">
+    (616) 635-4375
+    <span class="pipe"><strong>|</strong></span>
+    <a href="mailto:lmateju@umich.edu" target="_blank" rel="noopener noreferrer">lmateju@umich.edu</a>
+    <span class="pipe"><strong>|</strong></span>
+    <a href="https://linkedin.com/in/lukas-mateju" target="_blank" rel="noopener noreferrer">linkedin.com/in/lukas-mateju</a>
+    <span class="pipe"><strong>|</strong></span>
+    <a href="https://lukasmateju.github.io" target="_blank" rel="noopener noreferrer">lukasmateju.github.io</a>
+  </div>
+
+  <!------------------- EDUCATION SECTION  ------------------->
+  <div class="section-header">EDUCATION</div>
+
+  <!----------- UNIVERSITY OF MICHIGAN  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      Bachelor of Science in Industrial & Operations Engineering
+    </div>
+    <div class="experience-header-top-R">
+        Ann Arbor, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+      University of Michigan
+    </div>
+    <div class="experience-header-bottom-R">
+        Aug 2023 — Present
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li><strong>GPA:</strong> 3.2/4.0 | Minor in Computer Science, International Minor for Engineers</li>
+      <li><strong>Relevant Courses:</strong> Probability and Statistics for Engineers, Operations Engineering 
+          and Analytics, Optimization Methods, Data Structures and Algorithm Programming, Data Analytics, Markov 
+          Processes, Statistics and AI</li>
+      <li>Completed Engineering Study Abroad Program at Nebrija University <i>(Madrid, Spain | May 2024 — July 2024)</i></li>
+    </ul>
+  </div>
+
+  <!------------------- WORK EXPERIENCE SECTION  ------------------->
+  <div class="section-header">WORK EXPERIENCE</div>
+
+  <!----------- LANL INTERNSHIP  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      Automation Engineering Intern
+    </div>
+    <div class="experience-header-top-R">
+        Los Alamos, NM
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Los Alamos National Laboratory
+    </div>
+    <div class="experience-header-bottom-R">
+        June 2025 — Present
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Spearheaded design and fabrication of a modular purification panel to streamline hot cell 
+        isotope workflows, boosting consistency, safety, and operator ergonomics under strict spatial, 
+        material, and radiation constraints</li>
+      <li>Integrated necessary chemical hardware into panel design with custom 3D-printed clips that 
+        allowed for reproducibility and cheap manufacturing for each isotope separation process, 
+        decreasing production costs by 32%</li>
+      <li>Developed PLC programs for automation hardware that helped with isotope processing and activity 
+        detection, reducing the need for manual operation and improving processing times by 18%</li>
+    </ul>
+  </div>
+
+  <!----------- SWOBODA INTERNSHIP  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      Industrial Engineering Intern
+    </div>
+    <div class="experience-header-top-R">
+        Kentwood, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Swoboda Technologies Inc.
+    </div>
+    <div class="experience-header-bottom-R">
+        June 2023 — December 2023
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Designed and optimized autonomous production lines for high-profile clients, including 
+        Tesla, GHSP, GM, and BOSCH, utilizing CAD to develop customized manufacturing systems 
+        that improved reliability and performance </li>
+      <li>Aided production line optimization efforts by streamlining workflows, reducing downtime, 
+        and enhancing overall system productivity through data-driven analysis and cross-functional c
+        ollaboration</li>
+      <li>Conducted time and motion studies on autonomous production lines to identify inefficiencies, 
+        optimize SOP’s, and improve workstation layouts, increasing productivity and reducing cycle 
+        times by 15 seconds per part</li>
+    </ul>
+  </div>
+
+
+  <!------------------- LEADERSHIP/PROJECT EXPERIENCE SECTION  ------------------->
+  <div class="section-header">LEADERSHIP/PROJECT EXPERIENCE</div>
+
+  <!----------- CZECH CLUB  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      President
+    </div>
+    <div class="experience-header-top-R">
+        Ann Arbor, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Michigan Czech Student Association
+    </div>
+    <div class="experience-header-bottom-R">
+        August 2023 — Present
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Increased membership by 20% over the course of 6 months along with improving campus 
+        visibility utilizing outreach campaigns, expanding partnerships with international 
+        programs, and expanding social media presence</li>
+    </ul>
+  </div>
+
+  <!----------- HUMAN POWERED SUBMARINE  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+        Outfitting Coordinator
+    </div>
+    <div class="experience-header-top-R">
+        Ann Arbor, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Michigan Human Powered Submarine
+    </div>
+    <div class="experience-header-bottom-R">
+        August 2024 — Present
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Collaborated on submarine design, manufacturing, and outfitting of critical submarine 
+        components, ensuring structural integrity and ergonomic configurations to enhance pilot 
+        comfort, maneuverability, and safety </li>
+    </ul>
+  </div>
+
+  <!----------- BUILD & LAUNCH  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      Project Manager: <i>Stumble</i>
+    </div>
+    <div class="experience-header-top-R">
+        Ann Arbor, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Michigan Build & Launch
+    </div>
+    <div class="experience-header-bottom-R">
+        January 2024 — February 2025
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Led and managed a multi-disciplinary team of 6 students in developing a full-stack 
+        social media platform for students, gaining expertise in front-end and back-end web 
+        development using React, JavaScript, and Next.js</li>
+      <li>Directed the full project lifecycle from concept to deployment, honing project 
+        management skills by prioritizing feature development, coordinating tasks, and ensuring 
+        seamless integration of UMich API</li>
+    </ul>
+  </div>
+
+  <!----------- ROBODAWGS  ----------->
+  <div class="experience-header-top">
+    <div class="experience-header-top-L">
+      Grandville, MI
+    </div>
+    <div class="experience-header-top-R">
+        Grandville, MI
+    </div>
+  </div>
+  <div class="experience-header-bottom">
+    <div class="experience-header-bottom-L">
+        Michigan Czech Student Association
+    </div>
+    <div class="experience-header-bottom-R">
+        August 2021 — June 2023
+    </div>
+  </div>
+  <div class="bullet-section">
+    <ul>
+      <li>Mentored elementary students in robotics, teaching engineering concepts and block-based 
+        coding while developing structured lesson plans and hands-on activities to strengthen 
+        problem-solving and technical skills</li>
+    </ul>
+  </div>
+  
+
+  <!-- Section Header Example -->
+  <div class="section-header">ADDITIONAL INFORMATION</div>
+
+  <!-- Non-bulleted Description -->
+  <div class="additional-info">
+    <p><strong>LANGUAGES:</strong> Czech <i>(Full Professional Proficiency)</i>, Spanish <i>(Limited Working Proficiency)</i></p>
+    <p><strong>TECHNICAL SKILLS:</strong> C++, Python, SQL, Java, React, CSS, HTML, MATLAB, 
+        Microsoft Suite, CAD <i>(Solidworks, Inventor, Onshape, Fusion 360, AutoCAD)</i>, Figma, Canva, Machine Learning, PLC Programming</p>
+    <p><strong>INTERESTS:</strong> Triathlons, Skiing, Backpacking, Rock Climbing, Collecting Records, Traveling, 3D Printing, Battle Bots</p>
+  </div>
+</body>
+</html>

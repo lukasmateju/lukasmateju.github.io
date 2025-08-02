@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="post" style="max-width: 90 0px; margin: 0 auto;">
+  <header class="post-header" style="padding-left: 1rem; padding-right: 1rem;">
+    <h1 class="post-title">
+      {{ page.title }}
+      {% if page.resume_pdf %}
+        <a
+          {% if page.resume_pdf contains '://' %}
+            href="{{ page.resume_pdf }}"
+          {% else %}
+            href="{{ page.resume_pdf | prepend: 'assets/resume/' | relative_url }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+        >
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    {% if page.resume_html %}
+      <div class="resume-wrapper">
+        <iframe 
+          id="resumeFrame"
+          src="{% if page.resume_html contains '://' %}{{ page.resume_html }}{% else %}{{ page.resume_html | prepend: 'assets/resume/' | relative_url }}{% endif %}" 
+          scrolling="no"
+          style="
+            width: 900px;
+            height: 1100px; /* ← manually set height */
+            border: none;
+            border-radius: 8px;
+            background: var(--global-bg-color);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+          "
+          ></iframe>
+      </div>
+    {% else %}
+      <p>No HTML resume specified. Please add `resume_html:` to the front matter.</p>
+    {% endif %}
+
+    {% if page.version_note %}
+      <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--global-muted-color);">
+        {{ page.version_note }}
+      </p>
+    {% endif %}
+  </article>
+</div>

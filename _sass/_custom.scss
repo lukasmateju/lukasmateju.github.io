@@ -264,3 +264,11 @@ span.fa-icon svg {
 span.fa-icon:hover svg {
   fill: var(--global-theme-color) !important;
 }
+
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}

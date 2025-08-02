@@ -1,11 +1,11 @@
 ---
-layout: cv
+layout: resume
 permalink: /resume/
 title: Resume
 nav: true
 nav_order: 0
-cv_pdf: example_pdf.pdf # you can also use external links here
-description:
-toc:
-  sidebar: left
+description: View and download Lukas Mateju's latest resume.
+resume_pdf: ResumeFall25.pdf
+resume_html: ResumeFall25.html
+version_note: Last updated August 1st, 2025
 ---
