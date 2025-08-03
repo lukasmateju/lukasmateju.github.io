@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Blank Project
+title: IOE 201 Project
 description: Here is the description of a blank project
 img:
 importance: 0
-category: Work Projects
+category: Course Projects
 ---
 Here is where the content of this project will go

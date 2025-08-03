@@ -5,7 +5,7 @@ permalink: /projects/
 description: Here are my current projects
 nav: true
 nav_order: 1
-display_categories: [Course Projects, Work Projects, Personal Projects, Software Projects, Older Projects]
+display_categories: [Work/Club Projects, Course Projects, Personal Projects, Software Projects, Older Projects]
 horizontal: false
 ---
 

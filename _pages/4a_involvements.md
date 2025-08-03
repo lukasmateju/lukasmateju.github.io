@@ -10,48 +10,55 @@ horizontal: false
 
 <!-- pages/involvements.md -->
 <div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized involvement items -->
-  {% for category in page.display_categories %}
-  <a id="{{ category | slugify }}" href=".#{{ category | slugify }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_items = site.involvements | where: "category", category %}
-  {% assign sorted_items = categorized_items | sort: "importance" | reverse %}
-  <!-- Generate cards for each involvement -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for item in sorted_items %}
-      {% include projects_horizontal.liquid project=item %}
+  {% if site.enable_project_categories and page.display_categories %}
+    <!-- Display categorized involvement items -->
+    {% for category in page.display_categories %}
+      <a id="{{ category | slugify }}" href="#{{ category | slugify }}">
+        <h2 class="category">{{ category }}</h2>
+      </a>
+
+      {% assign group = site.involvements
+         | where: "category", category
+         | sort: "importance"
+         | reverse %}
+
+      {% if page.horizontal %}
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2">
+            {% for project in group %}
+              {% include projects_horizontal.liquid %}
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <div class="row row-cols-1 row-cols-md-3">
+          {% for project in group %}
+            {% include projects.liquid %}
+          {% endfor %}
+        </div>
+      {% endif %}
     {% endfor %}
-    </div>
-  </div>
+
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for item in sorted_items %}
-      {% include projects.liquid project=item %}
-    {% endfor %}
-  </div>
+    <!-- Display all involvement items without categories -->
+    {% assign group = site.involvements
+       | sort: "importance"
+       | reverse %}
+
+    {% if page.horizontal %}
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+          {% for project in group %}
+            {% include projects_horizontal.liquid %}
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <div class="row row-cols-1 row-cols-md-3">
+        {% for project in group %}
+          {% include projects.liquid %}
+        {% endfor %}
+      </div>
+    {% endif %}
   {% endif %}
-  {% endfor %}
-{% else %}
-<!-- Display all involvement items without categories -->
-{% assign sorted_items = site.involvements | sort: "importance" | reverse %}
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for item in sorted_items %}
-      {% include projects_horizontal.liquid project=item %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for item in sorted_items %}
-      {% include projects.liquid project=item %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
 </div>

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Blank involvment
+title: High School Robotics
 description: Here is the description of a blank involvement
-img:
+img: assets/img/involvements/RoboDawgs_Logo.png
 importance: 0
-category: Work Experience
+category: Past Activities
 ---
 Here is where the content of this involvemnt will go

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Blank involvment
+title: Swoboda Inc. Internship
 description: Here is the description of a blank involvement
-img:
+img: assets/img/involvements/Swoboda_Logo.svg
 importance: 0
 category: Work Experience
 ---
