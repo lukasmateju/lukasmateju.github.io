@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-resume",
           title: "Resume",
-          description: "View and download Lukas Mateju&#39;s latest resume.",
+          description: "View and download my most current resume.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/resume/";
