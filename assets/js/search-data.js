@@ -85,83 +85,73 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-michigan-build-amp-launch",
+          title: 'Michigan Build &amp;amp; Launch',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/b-l-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-boy-scouts-of-america",
+          title: 'Boy Scouts of America',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/boy-scouts-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-michigan-czech-student-association",
+          title: 'Michigan Czech Student Association',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/czech-club-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-grandville-high-school",
+          title: 'Grandville High School',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/grandville-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-hail-robotics",
+          title: 'HAIL Robotics',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/hail-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-human-powered-submarine",
+          title: 'Human Powered Submarine',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/hps-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
-          description: "Here is the description of a blank involvement",
-          section: "Involvements",handler: () => {
-              window.location.href = "/involvements/hs-band-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-high-school-robotics",
+          title: 'High School Robotics',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/hs-robotics-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-high-school-swim-amp-dive",
+          title: 'High School Swim &amp;amp; Dive',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/hs-swim-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-los-alamos-national-labratory-internship",
+          title: 'Los Alamos National Labratory Internship',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/lanl-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
-          description: "Here is the description of a blank involvement",
-          section: "Involvements",handler: () => {
-              window.location.href = "/involvements/nhs-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-nebrija-university-study-abroad-course",
+          title: 'Nebrija University Study Abroad Course',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/nebrija-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-robodawgs-coaching",
+          title: 'Robodawgs Coaching',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/robodawgs-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-swoboda-inc-internship",
+          title: 'Swoboda Inc. Internship',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/swoboda-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-tau-epsilon-kappa",
+          title: 'Tau Epsilon Kappa',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/tek-involv/";
-            },},{id: "involvements-blank-involvment",
-          title: 'Blank involvment',
+            },},{id: "involvements-university-of-michigan",
+          title: 'University of Michigan',
           description: "Here is the description of a blank involvement",
           section: "Involvements",handler: () => {
               window.location.href = "/involvements/uom-involv/";
@@ -176,83 +166,73 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-blank-project",
-          title: 'Blank Project',
+          section: "News",},{id: "projects-404-page-minigame-project",
+          title: '404 Page Minigame Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/404Minigame_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-album-drawings-project",
+          title: 'Album Drawings Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Album-Drawings_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-beetle-weight-battle-bot-project",
+          title: 'Beetle Weight Battle Bot Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Battle-Bot_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-cricut-software-hack-project",
+          title: 'Cricut Software Hack Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/CricutHack_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
-          description: "Here is the description of a blank project",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/EPortfolio_proj%20copy%202/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-e-portfolio-website-project",
+          title: 'E-Portfolio Website Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/EPortfolio_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-ioe-201-project",
+          title: 'IOE 201 Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/IOE201_Proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-ioe-373-project",
+          title: 'IOE 373 Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/IOE373_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-konami-code-project",
+          title: 'Konami Code Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/KonamiCode_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-lanl-internship-project",
+          title: 'LANL Internship Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LANL_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-me-250-project",
+          title: 'ME 250 Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ME-250_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-umich-planning-spreadsheet-project",
+          title: 'UMich Planning Spreadsheet Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Planning-Sheet_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-stumble-projects",
+          title: 'Stumble Projects',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Stumble_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
-          description: "Here is the description of a blank project",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Swoboda_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-tek-pledge-project",
+          title: 'TEK Pledge Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/TEK-Pledge_proj/";
-            },},{id: "projects-blank-project",
-          title: 'Blank Project',
+            },},{id: "projects-vex-2023-season-project",
+          title: 'VEX 2023 Season Project',
           description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
               window.location.href = "/projects/VEX-2023_proj/";
