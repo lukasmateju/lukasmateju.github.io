@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "A growing collection of your cool projects.",
+          description: "Here are my current projects",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -30,26 +30,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/posts/index.html";
           },
-        },{id: "dropdown-tbd",
-              title: "TBD",
+        },{id: "dropdown-involvements",
+              title: "Involvements",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "";
+                window.location.href = "/involvements/";
               },
-            },{id: "dropdown-tbd",
-              title: "TBD",
+            },{id: "dropdown-favorites",
+              title: "Favorites",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "";
+                window.location.href = "/favorites";
               },
-            },{id: "dropdown-media",
-              title: "Media",
+            },{id: "dropdown-random-facts",
+              title: "Random Facts",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/media/";
+                window.location.href = "/random-facts/";
               },
             },{id: "dropdown-games",
               title: "Games",
@@ -85,6 +85,86 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/b-l-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/boy-scouts-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/czech-club-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/grandville-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/hail-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/hps-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/hs-band-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/hs-robotics-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/hs-swim-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/lanl-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/nhs-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/nebrija-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/robodawgs-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/swoboda-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/tek-involv/";
+            },},{id: "involvements-blank-involvment",
+          title: 'Blank involvment',
+          description: "Here is the description of a blank involvement",
+          section: "Involvements",handler: () => {
+              window.location.href = "/involvements/uom-involv/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
@@ -96,51 +176,86 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/404Minigame_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/Album-Drawings_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/Battle-Bot_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/CricutHack_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/EPortfolio_proj%20copy%202/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+              window.location.href = "/projects/EPortfolio_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+              window.location.href = "/projects/IOE201_Proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+              window.location.href = "/projects/IOE373_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/KonamiCode_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/LANL_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ME-250_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Planning-Sheet_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Stumble_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Swoboda_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/TEK-Pledge_proj/";
+            },},{id: "projects-blank-project",
+          title: 'Blank Project',
+          description: "Here is the description of a blank project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/VEX-2023_proj/";
             },},{
         id: 'social-linkedin',
         title: 'LinkedIn',
