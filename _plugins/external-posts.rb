@@ -70,6 +70,10 @@ module ExternalPosts
       src['posts'].each do |post|
         puts "...fetching #{post['url']}"
         content = fetch_content_from_url(post['url'])
+        # Inject custom title if specified in _config.yml
+        if post['title']
+          content[:title] = post['title']
+        end
         content[:published] = parse_published_date(post['published_date'])
         create_document(site, src['name'], post['url'], content)
       end

@@ -35,7 +35,7 @@ pagination:
     <ul class="p-0 m-0">
       {% for tag in site.display_tags %}
         <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/posts/tag/' | relative_url }}">{{ tag }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -46,7 +46,7 @@ pagination:
       {% endif %}
       {% for category in site.display_categories %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/posts/category/' | relative_url }}">{{ category }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -73,7 +73,7 @@ pagination:
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
+<h3 class="card-title">{{ post.title }}</h3>
 <p class="card-text">{{ post.description }}</p>
 
                     {% if post.external_source == blank %}
@@ -148,7 +148,7 @@ pagination:
         {% endif %}
       </p>
       <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | relative_url }}">
+        <a href="{{ year | prepend: '/posts/' | relative_url }}">
           <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
 
           {% if tags != "" %}
