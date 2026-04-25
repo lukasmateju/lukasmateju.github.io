@@ -1,0 +1,64 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props as Props;
+const { Content } = await project.render();
+const links = project.data.links ?? {};
+---
+
+<BaseLayout
+  title={`${project.data.title} | Projects`}
+  description={project.data.summary}
+>
+  <article class="project-detail">
+    <div class="project-detail-hero">
+      <p class="eyebrow">{project.data.category}</p>
+      <h1>{project.data.title}</h1>
+      <p class="lede">{project.data.summary}</p>
+
+      {project.data.tags.length > 0 && (
+        <ul class="tag-list" aria-label="Project tags">
+          {project.data.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+      )}
+
+      {(links.github || links.demo || links.external) && (
+        <div class="button-row">
+          {links.github && (
+            <a class="button button-small" href={links.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          )}
+          {links.demo && (
+            <a class="button button-small" href={links.demo} target="_blank" rel="noreferrer">
+              Demo
+            </a>
+          )}
+          {links.external && (
+            <a class="button button-small" href={links.external} target="_blank" rel="noreferrer">
+              External link
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+
+    <div class="surface-card prose-block">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

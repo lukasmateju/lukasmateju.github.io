@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = (await getCollection("projects")).sort(
+  (left, right) => left.data.rank - right.data.rank
+);
+const featuredProjects = projects.filter((project) => project.data.featured);
+---
+
+<BaseLayout
+  title="Projects | Lukas Mateju"
+  description="Selected projects and coursework by Lukas Mateju."
+>
+  <section class="page-intro">
+    <p class="eyebrow">Projects</p>
+    <h1>All projects live in one collection now.</h1>
+    <p class="lede">
+      Each card is backed by a Markdown file in <code>src/content/projects</code>, which keeps
+      the writing workflow simple and makes it easy to add detail pages later.
+    </p>
+  </section>
+
+  <section class="section-heading">
+    <div>
+      <p class="eyebrow">Featured</p>
+      <h2>The first set to polish</h2>
+    </div>
+  </section>
+
+  <section class="project-grid">
+    {featuredProjects.map((project) => <ProjectCard project={project} />)}
+  </section>
+
+  <section class="section-heading section-heading-spaced">
+    <div>
+      <p class="eyebrow">Collection</p>
+      <h2>Everything in the project archive</h2>
+    </div>
+  </section>
+
+  <section class="project-grid">
+    {projects.map((project) => <ProjectCard project={project} compact />)}
+  </section>
+</BaseLayout>

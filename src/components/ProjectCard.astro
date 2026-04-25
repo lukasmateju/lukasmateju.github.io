@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+  compact?: boolean;
+}
+
+const { project, compact = false } = Astro.props as Props;
+const { data, slug } = project;
+---
+
+<article class:list={["project-card", { compact }]}>
+  <div class="project-card-top">
+    <p class="project-meta">
+      <span>{data.category}</span>
+      {data.timeline && <span>{data.timeline}</span>}
+    </p>
+    <h3>
+      <a href={`/projects/${slug}`}>{data.title}</a>
+    </h3>
+  </div>
+
+  <p class="project-summary">{data.summary}</p>
+
+  {data.tags.length > 0 && (
+    <ul class="tag-list" aria-label="Project tags">
+      {data.tags.map((tag: string) => <li>{tag}</li>)}
+    </ul>
+  )}
+</article>

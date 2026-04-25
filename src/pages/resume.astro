@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume | Lukas Mateju" description="Resume page for Lukas Mateju.">
+  <section class="page-intro narrow">
+    <p class="eyebrow">Resume</p>
+    <h1>Keep the file in one place and the page stays simple.</h1>
+    <p class="lede">
+      Replace <code>public/resume.pdf</code> with the current version whenever you want to
+      update it. The download link below will always stay the same.
+    </p>
+  </section>
+
+  <section class="surface-card resume-card">
+    <div class="resume-actions">
+      <a class="button" href="/resume.pdf" download>
+        Download PDF
+      </a>
+      <a class="button button-ghost" href="/projects">
+        Back to projects
+      </a>
+    </div>
+
+    <object class="resume-frame" data="/resume.pdf" type="application/pdf">
+      <p>
+        The embedded preview will show up once <code>public/resume.pdf</code> contains your
+        actual resume file.
+      </p>
+    </object>
+  </section>
+</BaseLayout>
