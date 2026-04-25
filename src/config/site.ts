@@ -2,10 +2,16 @@ export const siteConfig = {
   name: "Lukas Mateju",
   title: "Lukas Mateju",
   description: "Portfolio site for Lukas Mateju with projects, background, and resume.",
-  url: "https://lukasmateju.com"
+  url: "https://lukasmateju.com",
+  resume: {
+    htmlHref: "/resume/resume.html",
+    pdfHref: "/resume/resume.pdf",
+    versionNote: "Last updated August 1, 2025",
+    status: "Current public resume"
+  }
 };
 
-export type PageId = "home" | "projects" | "about" | "resume";
+export type PageId = "home" | "projects" | "about" | "resume" | "styleLab";
 
 export interface PageSettings {
   id: PageId;
@@ -58,6 +64,16 @@ export const pageSettings: PageSettings[] = [
     published: true,
     showInNav: true,
     navOrder: 3
+  },
+  {
+    id: "styleLab",
+    label: "Style Lab",
+    href: "/style-lab",
+    title: "Style Lab | Lukas Mateju",
+    description: "Temporary theme exploration page for the portfolio.",
+    published: true,
+    showInNav: true,
+    navOrder: 4
   }
 ];
 

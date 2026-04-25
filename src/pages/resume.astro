@@ -1,38 +1,47 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getPageSettings } from "../config/site";
+import { getPageSettings, siteConfig } from "../config/site";
 
 const page = getPageSettings("resume");
 if (!page.published) {
   return Astro.redirect("/");
 }
+
+const resume = siteConfig.resume;
 ---
 
 <BaseLayout title={page.title} description={page.description}>
   <section class="page-intro narrow">
     <p class="eyebrow">Resume</p>
-    <h1>Keep the file in one place and the page stays simple.</h1>
+    <h1>Resume, built into the site.</h1>
     <p class="lede">
-      Replace <code>public/resume.pdf</code> with the current version whenever you want to
-      update it. The download link below will always stay the same.
+      The page uses the HTML version of the resume for a cleaner read, with the PDF kept
+      one click away for downloading or sharing.
     </p>
   </section>
 
   <section class="surface-card resume-card">
-    <div class="resume-actions">
-      <a class="button" href="/resume.pdf" download>
-        Download PDF
-      </a>
-      <a class="button button-ghost" href="/projects">
-        Back to projects
-      </a>
+    <div class="resume-toolbar">
+      <div class="resume-version-card" aria-label="Resume version">
+        <span class="resume-version-kicker">Version</span>
+        <strong>{resume.status}</strong>
+        <span>{resume.versionNote}</span>
+      </div>
+
+      <div class="resume-actions">
+        <a class="button" href={resume.pdfHref} download>
+          Download PDF
+        </a>
+      </div>
     </div>
 
-    <object class="resume-frame" data="/resume.pdf" type="application/pdf">
-      <p>
-        The embedded preview will show up once <code>public/resume.pdf</code> contains your
-        actual resume file.
-      </p>
-    </object>
+    <div class="resume-preview-shell">
+      <iframe
+        class="resume-frame"
+        src={resume.htmlHref}
+        title="HTML resume preview"
+        loading="lazy"
+      ></iframe>
+    </div>
   </section>
 </BaseLayout>

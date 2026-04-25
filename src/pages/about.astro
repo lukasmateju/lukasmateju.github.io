@@ -7,52 +7,84 @@ if (!page.published) {
   return Astro.redirect("/");
 }
 
-const values = [
-  "I like projects that mix systems thinking with hands-on execution.",
-  "I want this site to make room for technical work and the personal context around it.",
-  "The structure should stay simple enough that updating it is never a chore."
+const pathNotes = [
+  "Engineering started early through building, tinkering, and competitive robotics, where ideas had to survive real constraints.",
+  "Industrial and Operations Engineering fits the way I like to think: systems, tradeoffs, data, people, and execution all connected.",
+  "Computer Science gives me a practical way to build tools around those systems instead of only describing what should improve."
 ];
 
-const interests = [
-  "Engineering teams and long-running build projects",
-  "Coursework that turns into practical tools or experiments",
-  "Communities, clubs, and side interests that make a portfolio feel human"
+const currentWork = [
+  "Continuing research and engineering work with Los Alamos National Laboratory after a summer internship focused on modular panel design for hot cell workflows.",
+  "Building out University of Michigan coursework across IOE and CS into project write-ups that explain goals, constraints, and outcomes clearly.",
+  "Staying involved in technical and community organizations, including TEK, Michigan Czech Student Association, and Human Powered Submarine."
+];
+
+const siteGoals = [
+  "Make project pages useful to read quickly, with enough context to understand why the work mattered.",
+  "Show a balance of software, systems, manufacturing, research, and student organization work.",
+  "Keep a little personality in the writing so the site feels like a person built it, not just a template."
+];
+
+const workingStyle = [
+  "I like problems where the best answer has to account for both the model and the messy real-world setup around it.",
+  "I tend to learn by building a first version, testing where it falls apart, and then tightening the system from there.",
+  "I care about documentation because good work becomes more valuable when someone else can understand and reuse it."
 ];
 ---
 
 <BaseLayout title={page.title} description={page.description}>
   <section class="page-intro narrow">
     <p class="eyebrow">About</p>
-    <h1>A better place for the story behind the work.</h1>
+    <h1>The short version behind the work.</h1>
     <p class="lede">
-      The old portfolio had the right ingredients but not much personality. This rebuild is
-      meant to combine projects, context, interests, and a clearer sense of who the site is
-      actually about.
+      I am a University of Michigan student studying Industrial and Operations Engineering
+      with Computer Science. The work I want to highlight most sits between physical systems,
+      practical software, team projects, and the process of making rough ideas usable.
     </p>
   </section>
 
-  <section class="two-column">
+  <section class="surface-card prose-block about-story">
+    <h2>How I got here</h2>
+    <p>
+      My path into engineering started long before college through building things, robotics,
+      and the steady pull of wanting to understand how complicated systems fit together.
+      That eventually led me toward Industrial and Operations Engineering, where technical
+      decisions are tied to constraints like time, cost, safety, people, and reliability.
+    </p>
+    <p>
+      I am also studying Computer Science because many of the systems I care about need
+      better tools around them. I like work where a spreadsheet, script, interface, fixture,
+      or physical build can make a complicated process easier to repeat and explain.
+    </p>
+  </section>
+
+  <section class="two-column about-grid">
     <article class="surface-card">
-      <h2>What I want this site to do</h2>
+      <h2>Path</h2>
       <ul class="stack-list">
-        {values.map((item) => <li>{item}</li>)}
+        {pathNotes.map((item) => <li>{item}</li>)}
       </ul>
     </article>
 
     <article class="surface-card">
-      <h2>What tends to show up in my work</h2>
+      <h2>Now</h2>
       <ul class="stack-list">
-        {interests.map((item) => <li>{item}</li>)}
+        {currentWork.map((item) => <li>{item}</li>)}
       </ul>
     </article>
   </section>
 
   <section class="surface-card prose-block">
-    <h2>Next pass</h2>
-    <p>
-      This page is ready for real copy when you want it. A good next step is pulling over the
-      strongest details from your current site, then trimming them into a tighter and more
-      personal narrative instead of rebuilding the old page structure one-for-one.
-    </p>
+    <h2>How I tend to work</h2>
+    <ul class="stack-list">
+      {workingStyle.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="surface-card prose-block">
+    <h2>What I want the portfolio to do</h2>
+    <ul class="stack-list">
+      {siteGoals.map((item) => <li>{item}</li>)}
+    </ul>
   </section>
 </BaseLayout>

@@ -44,7 +44,7 @@ dev-bg:
 	@if [ -f "$(PID_FILE)" ] && kill -0 "$$(cat $(PID_FILE))" 2>/dev/null; then \
 		printf "Astro dev server is already running with PID %s\n" "$$(cat $(PID_FILE))"; \
 	else \
-		ASTRO_TELEMETRY_DISABLED=$${ASTRO_TELEMETRY_DISABLED:-1} npm run dev -- --host $${HOST:-0.0.0.0} --port $${PORT:-$(PORT)} > "$(LOG_FILE)" 2>&1 & \
+		nohup env ASTRO_TELEMETRY_DISABLED=$${ASTRO_TELEMETRY_DISABLED:-1} npm run dev -- --host $${HOST:-0.0.0.0} --port $${PORT:-$(PORT)} > "$(LOG_FILE)" 2>&1 & \
 		printf "%s" "$$!" > "$(PID_FILE)"; \
 		printf "Astro dev server started at http://localhost:%s with PID %s\n" "$${PORT:-$(PORT)}" "$$!"; \
 		printf "Logs: %s\n" "$(LOG_FILE)"; \

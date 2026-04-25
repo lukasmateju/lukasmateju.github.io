@@ -18,6 +18,10 @@ Common commands are available through `make`:
 - `make docker-dev` starts the Docker-based dev environment.
 - `make docker-stop` stops Docker containers from `compose.yml`.
 
+Temporary design exploration lives at `/style-lab`.
+
+Asset planning lives in `docs/asset-checklist.md`.
+
 ## Custom Domain
 
 The production domain is `lukasmateju.com`.
@@ -48,3 +52,8 @@ Project entries live in `src/content/projects`. The frontmatter controls whether
 - `featured`: marks a project as featured on `/projects`.
 
 Page/nav settings live in `src/config/site.ts`.
+
+Resume settings also live in `src/config/site.ts`. The current public files are:
+
+- `public/resume/resume.html`
+- `public/resume/resume.pdf`

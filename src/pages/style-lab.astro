@@ -1,0 +1,180 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPageSettings } from "../config/site";
+
+const page = getPageSettings("styleLab");
+if (!page.published) {
+  return Astro.redirect("/");
+}
+
+const directions = [
+  {
+    id: "blueprint",
+    label: "Blueprint",
+    title: "Technical, crisp, engineering-forward",
+    text: "Solid blue surfaces, compact cards, squared buttons, and a quiet grid that nods toward technical drawings without becoming decorative.",
+    tags: ["Current favorite", "Sharp", "Resume-friendly"]
+  },
+  {
+    id: "maize",
+    label: "Maize Line",
+    title: "Michigan signal without becoming a fan page",
+    text: "Navy structure with controlled maize accents. Useful if you want U-M to show up as context while the portfolio still feels personal.",
+    tags: ["U-M", "High contrast", "Confident"]
+  },
+  {
+    id: "lab",
+    label: "Lab Notes",
+    title: "Research notebook, warmer and editorial",
+    text: "A calmer academic direction with serif headings, paper-like cards, and simple labels for research, coursework, and build logs.",
+    tags: ["Academic", "Readable", "Warm"]
+  },
+  {
+    id: "workshop",
+    label: "Workshop",
+    title: "Hands-on, hardware-adjacent, tactile",
+    text: "Darker metal tones, compact chips, sharper separators, and a little more weight for robotics and fabrication stories.",
+    tags: ["Hardware", "Bold", "Dense"]
+  },
+  {
+    id: "systems",
+    label: "Systems",
+    title: "Clean dashboard for repeated project browsing",
+    text: "Very structured cards, lighter typography, and interface-like spacing. Better if the site grows into lots of projects and categories.",
+    tags: ["Organized", "Scannable", "Tool-like"]
+  },
+  {
+    id: "personal",
+    label: "Personal Archive",
+    title: "More human, photo-friendly, still polished",
+    text: "Room for candid images, travel/project photos, and short notes. Less corporate, but still clean enough for professional links.",
+    tags: ["Photo-led", "Personal", "Flexible"]
+  }
+];
+
+const themePairs = [
+  {
+    label: "Blueprint",
+    className: "blueprint",
+    light: "Pale blue page, white cards, navy text, bright action blue.",
+    dark: "Deep navy page, slate cards, pale blue text, brighter action blue."
+  },
+  {
+    label: "Maize Line",
+    className: "maize",
+    light: "White cards with navy structure and controlled maize accents.",
+    dark: "Navy-first cards with maize as the main signal color."
+  },
+  {
+    label: "Lab Notes",
+    className: "lab",
+    light: "Paper-like surfaces with academic serif headings.",
+    dark: "Ink notebook surfaces with warm off-white text."
+  },
+  {
+    label: "Systems",
+    className: "systems",
+    light: "Dashboard-clean spacing with crisp borders.",
+    dark: "Console-like structure with low-glow blue separators."
+  }
+];
+
+const navIdeas = [
+  "Compact text nav",
+  "Boxed active tab",
+  "Split resume button",
+  "Minimal wordmark",
+  "Project category rail"
+];
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <section class="page-intro narrow">
+    <p class="eyebrow">Temporary page</p>
+    <h1>Style lab</h1>
+    <p class="lede">
+      This page is a menu of possible visual directions. It is intentionally broader than the
+      final site should be, so you can react to options and narrow the direction.
+    </p>
+  </section>
+
+  <section class="style-nav-lab" aria-label="Navigation style samples">
+    <div class="style-nav style-nav-minimal">
+      <strong>LM</strong>
+      <nav>
+        {navIdeas.slice(0, 3).map((item) => <span>{item}</span>)}
+      </nav>
+    </div>
+
+    <div class="style-nav style-nav-block">
+      <strong>Lukas Mateju</strong>
+      <nav>
+        <span class="active">Home</span>
+        <span>Projects</span>
+        <span>Resume</span>
+      </nav>
+    </div>
+
+    <div class="style-nav style-nav-line">
+      <strong>Portfolio</strong>
+      <nav>
+        {navIdeas.slice(2).map((item) => <span>{item}</span>)}
+      </nav>
+    </div>
+  </section>
+
+  <section class="section-heading">
+    <div>
+      <p class="eyebrow">Theme pairs</p>
+      <h2>Each direction needs a light and dark personality</h2>
+    </div>
+  </section>
+
+  <section class="theme-pair-grid">
+    {themePairs.map((pair) => (
+      <article class={`theme-pair ${pair.className}`}>
+        <h3>{pair.label}</h3>
+        <div class="theme-pair-swatches">
+          <div class="theme-pair-card light">
+            <span>Light</span>
+            <p>{pair.light}</p>
+          </div>
+          <div class="theme-pair-card dark">
+            <span>Dark</span>
+            <p>{pair.dark}</p>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="style-lab-grid">
+    {directions.map((direction) => (
+      <article class={`style-sample ${direction.id}`}>
+        <div class="style-sample-top">
+          <p>{direction.label}</p>
+          <span>0{directions.indexOf(direction) + 1}</span>
+        </div>
+        <h2>{direction.title}</h2>
+        <p>{direction.text}</p>
+        <ul>
+          {direction.tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+        <div class="style-sample-actions">
+          <span>Primary</span>
+          <span>Secondary</span>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="surface-card prose-block">
+    <h2>How to use this page</h2>
+    <p>
+      Pick pieces, not necessarily a whole card. For example, you might like the Blueprint
+      color system, the Systems spacing, and the Personal Archive photo treatment. Once you
+      react to this page, the next pass can turn the winning pieces into the actual site
+      theme.
+    </p>
+  </section>
+</BaseLayout>
