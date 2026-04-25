@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Lukas Mateju",
   title: "Lukas Mateju",
   description: "Portfolio site for Lukas Mateju with projects, background, and resume.",
-  url: "https://lukasmateju.github.io"
+  url: "https://lukasmateju.com"
 };
 
 export type PageId = "home" | "projects" | "about" | "resume";
