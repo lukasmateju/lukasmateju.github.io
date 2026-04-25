@@ -8,7 +8,10 @@ const projects = defineCollection({
     category: z.string(),
     rank: z.number(),
     timeline: z.string().optional(),
+    published: z.boolean().default(true),
     featured: z.boolean().default(false),
+    showOnHome: z.boolean().optional(),
+    showInArchive: z.boolean().default(true),
     tags: z.array(z.string()).default([]),
     links: z
       .object({

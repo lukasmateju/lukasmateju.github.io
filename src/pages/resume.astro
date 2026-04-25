@@ -1,8 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPageSettings } from "../config/site";
+
+const page = getPageSettings("resume");
+if (!page.published) {
+  return Astro.redirect("/");
+}
 ---
 
-<BaseLayout title="Resume | Lukas Mateju" description="Resume page for Lukas Mateju.">
+<BaseLayout title={page.title} description={page.description}>
   <section class="page-intro narrow">
     <p class="eyebrow">Resume</p>
     <h1>Keep the file in one place and the page stays simple.</h1>

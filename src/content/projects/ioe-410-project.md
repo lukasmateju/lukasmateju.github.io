@@ -4,7 +4,10 @@ summary: Operations and systems-oriented project space reserved for a more polis
 category: Coursework
 rank: 4
 timeline: Course project
-featured: true
+published: false
+featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - IOE
   - Systems

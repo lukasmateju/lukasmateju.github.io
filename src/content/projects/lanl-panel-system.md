@@ -4,7 +4,10 @@ summary: Research and engineering work that should probably stay near the top on
 category: Research
 rank: 2
 timeline: Research experience
-featured: true
+published: false
+featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - Research
   - Engineering

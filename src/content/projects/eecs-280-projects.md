@@ -4,7 +4,10 @@ summary: Foundational programming work collected into one place so the course pr
 category: Coursework
 rank: 6
 timeline: Course archive
+published: false
 featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - C++
   - Foundations

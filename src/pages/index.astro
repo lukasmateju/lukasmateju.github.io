@@ -2,12 +2,17 @@
 import { getCollection } from "astro:content";
 import BentoBox from "../components/BentoBox.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { getPageSettings, getQuickLinks } from "../config/site";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { isProjectVisibleOnHome, sortProjectsByRank } from "../lib/projects";
 
-const projects = (await getCollection("projects")).sort(
-  (left, right) => left.data.rank - right.data.rank
-);
-const featuredProjects = projects.filter((project) => project.data.featured).slice(0, 4);
+const page = getPageSettings("home");
+if (!page.published) {
+  return Astro.redirect("/projects");
+}
+
+const projects = sortProjectsByRank(await getCollection("projects"));
+const featuredProjects = projects.filter(isProjectVisibleOnHome).slice(0, 4);
 
 const currentFocus = [
   "Building out this portfolio so it feels personal instead of template-first.",
@@ -21,16 +26,12 @@ const snapshot = [
   "Interested in clubs, tools, movies, and side quests that become real builds"
 ];
 
-const quickLinks = [
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
-  { label: "Resume", href: "/resume" }
-];
+const quickLinks = getQuickLinks(["projects", "about", "resume"]);
 ---
 
 <BaseLayout
-  title="Lukas Mateju"
-  description="Portfolio site for Lukas Mateju with projects, background, and resume."
+  title={page.title}
+  description={page.description}
 >
   <section class="hero">
     <div class="hero-copy">

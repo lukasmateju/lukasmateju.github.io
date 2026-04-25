@@ -4,7 +4,10 @@ summary: Algorithm and data structure work that deserves cleaner write-ups than 
 category: Coursework
 rank: 5
 timeline: Course archive
-featured: true
+published: false
+featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - C++
   - Algorithms

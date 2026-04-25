@@ -2,16 +2,30 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { getPageSettings } from "../config/site";
+import {
+  isProjectPublished,
+  isProjectVisibleInArchive,
+  sortProjectsByRank
+} from "../lib/projects";
 
-const projects = (await getCollection("projects")).sort(
-  (left, right) => left.data.rank - right.data.rank
+const page = getPageSettings("projects");
+if (!page.published) {
+  return Astro.redirect("/");
+}
+
+const projects = sortProjectsByRank(await getCollection("projects")).filter(
+  isProjectVisibleInArchive
 );
 const featuredProjects = projects.filter((project) => project.data.featured);
+const hiddenProjectCount = (await getCollection("projects")).filter(
+  (project) => !isProjectPublished(project) || !project.data.showInArchive
+).length;
 ---
 
 <BaseLayout
-  title="Projects | Lukas Mateju"
-  description="Selected projects and coursework by Lukas Mateju."
+  title={page.title}
+  description={page.description}
 >
   <section class="page-intro">
     <p class="eyebrow">Projects</p>
@@ -19,6 +33,13 @@ const featuredProjects = projects.filter((project) => project.data.featured);
     <p class="lede">
       Each card is backed by a Markdown file in <code>src/content/projects</code>, which keeps
       the writing workflow simple and makes it easy to add detail pages later.
+      {hiddenProjectCount > 0 && (
+        <span>
+          {" "}
+          {hiddenProjectCount} draft or hidden project{hiddenProjectCount === 1 ? "" : "s"} are
+          excluded from this public view.
+        </span>
+      )}
     </p>
   </section>
 

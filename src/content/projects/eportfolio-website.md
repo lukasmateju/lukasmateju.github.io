@@ -4,7 +4,10 @@ summary: The rebuild of this personal site from a theme-heavy academic layout to
 category: Personal
 rank: 1
 timeline: Current build
-featured: true
+published: false
+featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - Astro
   - Design

@@ -4,7 +4,10 @@ summary: Placeholder for a higher-level project story that highlights the tools,
 category: Coursework
 rank: 7
 timeline: Course project
+published: false
 featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - IOE
   - Modeling

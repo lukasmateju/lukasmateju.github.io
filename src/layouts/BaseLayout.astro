@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { siteConfig } from "../config/site";
 import "../styles/global.css";
 
 interface Props {
@@ -9,8 +10,8 @@ interface Props {
 }
 
 const {
-  title = "Lukas Mateju",
-  description = "Personal portfolio for Lukas Mateju."
+  title = siteConfig.title,
+  description = siteConfig.description
 } = Astro.props;
 ---
 

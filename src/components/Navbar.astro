@@ -1,11 +1,7 @@
 ---
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" }
-];
+import { getNavPages } from "../config/site";
 
+const links = getNavPages();
 const pathname = Astro.url.pathname;
 ---
 

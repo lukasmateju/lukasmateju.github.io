@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPageSettings } from "../config/site";
+
+const page = getPageSettings("about");
+if (!page.published) {
+  return Astro.redirect("/");
+}
 
 const values = [
   "I like projects that mix systems thinking with hands-on execution.",
@@ -14,10 +20,7 @@ const interests = [
 ];
 ---
 
-<BaseLayout
-  title="About | Lukas Mateju"
-  description="Background and interests for Lukas Mateju."
->
+<BaseLayout title={page.title} description={page.description}>
   <section class="page-intro narrow">
     <p class="eyebrow">About</p>
     <h1>A better place for the story behind the work.</h1>

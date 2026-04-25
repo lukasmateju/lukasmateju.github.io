@@ -4,7 +4,10 @@ summary: A hands-on build that adds personality fast because it shows fabricatio
 category: Personal
 rank: 3
 timeline: Ongoing build
-featured: true
+published: false
+featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - Hardware
   - Fabrication

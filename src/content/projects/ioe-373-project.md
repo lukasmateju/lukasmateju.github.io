@@ -4,7 +4,10 @@ summary: Placeholder for the course project summary, outcomes, and the methods t
 category: Coursework
 rank: 8
 timeline: Course project
+published: false
 featured: false
+showOnHome: false
+showInArchive: true
 tags:
   - IOE
   - Analysis
