@@ -11,24 +11,34 @@ const resume = siteConfig.resume;
 ---
 
 <BaseLayout title={page.title} description={page.description}>
-  <section class="page-intro narrow">
-    <p class="eyebrow">Resume</p>
-    <h1>Resume, built into the site.</h1>
-    <p class="lede">
-      The page uses the HTML version of the resume for a cleaner read, with the PDF kept
-      one click away for downloading or sharing.
-    </p>
+  <section class="resume-hero">
+    <div class="page-intro narrow">
+      <p class="eyebrow">Resume</p>
+      <h1>Resume, built into the site.</h1>
+      <p class="lede">
+        The HTML version is embedded for quick reading, while the PDF stays one click away
+        for downloading or sharing.
+      </p>
+    </div>
+
+    <aside class="resume-summary-panel" aria-label="Resume status">
+      <span class="resume-version-kicker">Version</span>
+      <strong>{resume.status}</strong>
+      <span>{resume.versionNote}</span>
+    </aside>
   </section>
 
   <section class="surface-card resume-card">
     <div class="resume-toolbar">
-      <div class="resume-version-card" aria-label="Resume version">
-        <span class="resume-version-kicker">Version</span>
-        <strong>{resume.status}</strong>
-        <span>{resume.versionNote}</span>
+      <div>
+        <p class="eyebrow">Document preview</p>
+        <h2>Readable here, portable as a PDF.</h2>
       </div>
 
       <div class="resume-actions">
+        <a class="button button-ghost" href={resume.htmlHref}>
+          Open HTML
+        </a>
         <a class="button" href={resume.pdfHref} download>
           Download PDF
         </a>

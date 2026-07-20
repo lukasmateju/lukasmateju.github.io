@@ -1,74 +1,114 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Work in progress page for Lukas Mateju's e-portfolio."
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Lukas Mateju | Work in Progress</title>
-    <style>
-      :root {
-        color-scheme: light dark;
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f7f7f4;
-        color: #1e2933;
-      }
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BentoBox from "../components/BentoBox.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getPageSettings } from "../config/site";
+import { isProjectVisibleOnHome, sortProjectsByRank } from "../lib/projects";
 
-      body {
-        display: grid;
-        min-height: 100vh;
-        margin: 0;
-        place-items: center;
-        padding: 2rem;
-      }
+const page = getPageSettings("home");
 
-      main {
-        max-width: 34rem;
-      }
+const homeProjects = sortProjectsByRank(await getCollection("projects")).filter(
+  isProjectVisibleOnHome
+);
 
-      img {
-        display: block;
-        width: min(100%, 22rem);
-        margin: 1.5rem auto 0;
-        border-radius: 10px;
-      }
+const focusAreas = [
+  "Operations research",
+  "Human-centered systems",
+  "Manufacturing and hardware",
+  "Practical software tools"
+];
 
-      p {
-        margin: 0 0 1rem;
-        line-height: 1.6;
-      }
+const statusCards = [
+  {
+    title: "Now",
+    eyebrow: "Current",
+    text: "University of Michigan IOE + CS work, research follow-through, and portfolio rebuild."
+  },
+  {
+    title: "Best Fit",
+    eyebrow: "Direction",
+    text: "Projects where models, tools, people, and physical constraints all have to agree."
+  },
+  {
+    title: "Site Goal",
+    eyebrow: "Portfolio",
+    text: "A compact place to understand the work quickly, then dig into the details when useful."
+  }
+];
+---
 
-      h1 {
-        margin: 0 0 1rem;
-        font-size: clamp(2.2rem, 8vw, 4rem);
-        line-height: 1;
-      }
-
-      a {
-        color: inherit;
-        font-weight: 700;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          background: #111827;
-          color: #f8fafc;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Work in progress.</h1>
-      <p>
-        A new e-portfolio iteration is coming soon. I am rebuilding this into something a
-        little cleaner, more useful, and with a lot more fun features. 
-        Enjoy this picture of my dog until the new iteration is officialy live.
+<BaseLayout title={page.title} description={page.description}>
+  <section class="home-hero">
+    <div class="home-hero-copy">
+      <p class="eyebrow">Industrial engineering + computer science</p>
+      <h1>Building useful systems from messy constraints.</h1>
+      <p class="lede">
+        I am Lukas Mateju, a University of Michigan student working across operations,
+        software, research, and hands-on engineering. This portfolio is being shaped into a
+        cleaner record of the projects, decisions, and systems I care about.
       </p>
-      <img src="/images/photoOfPepe.jpeg" alt="Pepe" />
-    </main>
-  </body>
-</html>
+      <div class="button-row">
+        <a class="button" href="/resume">View resume</a>
+        <a class="button button-ghost" href="/about">About me</a>
+      </div>
+    </div>
+
+    <aside class="home-hero-visual" aria-label="Profile summary">
+      <img class="hero-portrait" src="/images/Headshot-W26.png" alt="Lukas Mateju" />
+      <div class="hero-stat-grid">
+        <div>
+          <span>UMich</span>
+          <strong>IOE + CS</strong>
+        </div>
+        <div>
+          <span>Focus</span>
+          <strong>Systems</strong>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="home-strip" aria-label="Focus areas">
+    {focusAreas.map((area) => <span>{area}</span>)}
+  </section>
+
+  <section class="bento-grid home-bento">
+    {statusCards.map((card, index) => (
+      <BentoBox
+        title={card.title}
+        eyebrow={card.eyebrow}
+        accent={index === 1 ? "blue" : index === 2 ? "clay" : "sand"}
+      >
+        <p>{card.text}</p>
+      </BentoBox>
+    ))}
+  </section>
+
+  <section class="section-heading">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2>Project stories will live here.</h2>
+    </div>
+    <a class="text-link" href="/projects">Project archive</a>
+  </section>
+
+  {
+    homeProjects.length > 0 ? (
+      <section class="project-grid">
+        {homeProjects.slice(0, 4).map((project) => <ProjectCard project={project} />)}
+      </section>
+    ) : (
+      <section class="surface-card empty-feature">
+        <div>
+          <p class="eyebrow">In progress</p>
+          <h3>The project cards are ready for published write-ups.</h3>
+        </div>
+        <p>
+          The layout is already wired to the Markdown project collection. Once individual
+          projects are marked public, they will appear here automatically.
+        </p>
+      </section>
+    )
+  }
+</BaseLayout>

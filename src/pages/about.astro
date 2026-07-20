@@ -33,32 +33,43 @@ const workingStyle = [
 ---
 
 <BaseLayout title={page.title} description={page.description}>
-  <section class="page-intro narrow">
-    <p class="eyebrow">About</p>
-    <h1>The short version behind the work.</h1>
-    <p class="lede">
-      I am a University of Michigan student studying Industrial and Operations Engineering
-      with Computer Science. The work I want to highlight most sits between physical systems,
-      practical software, team projects, and the process of making rough ideas usable.
-    </p>
+  <section class="about-hero">
+    <div class="page-intro narrow">
+      <p class="eyebrow">About</p>
+      <h1>The short version behind the work.</h1>
+      <p class="lede">
+        I am a University of Michigan student studying Industrial and Operations Engineering
+        with Computer Science. The work I want to highlight most sits between physical systems,
+        practical software, team projects, and the process of making rough ideas usable.
+      </p>
+    </div>
+
+    <aside class="profile-card" aria-label="Profile snapshot">
+      <img class="profile-card-image" src="/images/Headshot-W26.png" alt="Lukas Mateju" />
+      <div class="profile-card-copy">
+        <p class="eyebrow">Snapshot</p>
+        <h2>Systems thinker, builder, documenter.</h2>
+      </div>
+    </aside>
   </section>
 
-  <section class="surface-card prose-block about-story">
-    <h2>How I got here</h2>
-    <p>
-      My path into engineering started long before college through building things, robotics,
-      and the steady pull of wanting to understand how complicated systems fit together.
-      That eventually led me toward Industrial and Operations Engineering, where technical
-      decisions are tied to constraints like time, cost, safety, people, and reliability.
-    </p>
-    <p>
-      I am also studying Computer Science because many of the systems I care about need
-      better tools around them. I like work where a spreadsheet, script, interface, fixture,
-      or physical build can make a complicated process easier to repeat and explain.
-    </p>
-  </section>
+  <section class="about-layout">
+    <article class="surface-card prose-block about-story about-story-main">
+      <p class="eyebrow">Origin</p>
+      <h2>How I got here</h2>
+      <p>
+        My path into engineering started long before college through building things, robotics,
+        and the steady pull of wanting to understand how complicated systems fit together.
+        That eventually led me toward Industrial and Operations Engineering, where technical
+        decisions are tied to constraints like time, cost, safety, people, and reliability.
+      </p>
+      <p>
+        I am also studying Computer Science because many of the systems I care about need
+        better tools around them. I like work where a spreadsheet, script, interface, fixture,
+        or physical build can make a complicated process easier to repeat and explain.
+      </p>
+    </article>
 
-  <section class="two-column about-grid">
     <article class="surface-card">
       <h2>Path</h2>
       <ul class="stack-list">
@@ -74,17 +85,21 @@ const workingStyle = [
     </article>
   </section>
 
-  <section class="surface-card prose-block">
-    <h2>How I tend to work</h2>
-    <ul class="stack-list">
-      {workingStyle.map((item) => <li>{item}</li>)}
-    </ul>
-  </section>
+  <section class="two-column about-grid">
+    <article class="surface-card prose-block">
+      <p class="eyebrow">Working style</p>
+      <h2>How I tend to work</h2>
+      <ul class="stack-list">
+        {workingStyle.map((item) => <li>{item}</li>)}
+      </ul>
+    </article>
 
-  <section class="surface-card prose-block">
-    <h2>What I want the portfolio to do</h2>
-    <ul class="stack-list">
-      {siteGoals.map((item) => <li>{item}</li>)}
-    </ul>
+    <article class="surface-card prose-block">
+      <p class="eyebrow">Portfolio role</p>
+      <h2>What I want the portfolio to do</h2>
+      <ul class="stack-list">
+        {siteGoals.map((item) => <li>{item}</li>)}
+      </ul>
+    </article>
   </section>
 </BaseLayout>

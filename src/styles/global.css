@@ -268,6 +268,10 @@ code {
 }
 
 .hero,
+.home-hero,
+.about-hero,
+.resume-hero,
+.about-layout,
 .two-column,
 .section-heading {
   display: grid;
@@ -280,8 +284,32 @@ code {
   padding: 2rem 0 1rem;
 }
 
+.home-hero,
+.about-hero,
+.resume-hero {
+  align-items: stretch;
+  padding: 2rem 0 1rem;
+}
+
+.home-hero {
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+}
+
+.about-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.46fr);
+}
+
+.resume-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.38fr);
+  align-items: end;
+}
+
 .hero-copy,
+.home-hero-copy,
 .hero-panel,
+.home-hero-visual,
+.profile-card,
+.resume-summary-panel,
 .bento-box,
 .surface-card,
 .project-card,
@@ -294,7 +322,11 @@ code {
 }
 
 .hero-copy,
+.home-hero-copy,
 .hero-panel,
+.home-hero-visual,
+.profile-card,
+.resume-summary-panel,
 .bento-box,
 .surface-card,
 .project-detail-hero,
@@ -302,8 +334,16 @@ code {
   padding: clamp(1.25rem, 2vw, 1.65rem);
 }
 
-.hero-copy {
+.hero-copy,
+.home-hero-copy {
   background: var(--surface-strong);
+}
+
+.home-hero-copy {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  min-height: 28rem;
 }
 
 .hero-panel {
@@ -334,6 +374,68 @@ code {
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-hero-visual,
+.profile-card,
+.resume-summary-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-hero-visual {
+  grid-template-rows: minmax(0, 1fr) auto;
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.hero-stat-grid div,
+.resume-summary-panel,
+.empty-feature {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.hero-stat-grid div {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem;
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-stat-grid span,
+.home-strip span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-hero-visual .hero-stat-grid span {
+  color: rgba(237, 246, 255, 0.68);
+}
+
+.hero-stat-grid strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
 }
 
 h1,
@@ -444,6 +546,10 @@ p {
 .bento-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 1rem 0 2rem;
+}
+
+.home-bento {
+  margin-top: 1.25rem;
 }
 
 .bento-box {
@@ -572,15 +678,68 @@ p {
   max-width: 52rem;
 }
 
+.home-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.home-strip span {
+  padding: 0.5rem 0.7rem;
+  border-radius: var(--radius-sm);
+  background: var(--chip-bg);
+}
+
 .two-column {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 1rem;
+}
+
+.about-layout {
+  grid-template-columns: minmax(0, 1.3fr) minmax(16rem, 0.7fr);
+  margin-top: 1rem;
+}
+
+.about-story-main {
+  grid-row: span 2;
+}
+
+.profile-card {
+  align-content: space-between;
+  background: var(--surface);
+}
+
+.profile-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.profile-card-copy {
+  display: grid;
+  gap: 0.7rem;
 }
 
 .surface-card,
 .resume-card,
 .project-detail-hero {
   background: var(--surface);
+}
+
+.empty-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
 }
 
 .compact-card {
@@ -616,6 +775,25 @@ p {
   gap: 1.5rem;
 }
 
+.resume-summary-panel {
+  align-content: end;
+  min-height: 11rem;
+  background: var(--ink);
+  color: var(--on-dark);
+  border-color: var(--ink);
+}
+
+.resume-summary-panel .resume-version-kicker,
+.resume-summary-panel span:last-child {
+  color: rgba(237, 246, 255, 0.72);
+}
+
+.resume-summary-panel strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
 .resume-toolbar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -641,7 +819,7 @@ p {
 }
 
 .resume-preview-shell {
-  overflow: visible;
+  overflow: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--resume-preview-bg);
@@ -651,10 +829,11 @@ p {
 }
 
 .resume-frame {
-  width: 100%;
+  width: min(100%, 8.5in);
   max-width: 8.5in;
   height: 11in;
   min-height: 11in;
+  flex: 0 0 auto;
   margin: 0 auto;
   border: 0;
   border-radius: 2px;
@@ -945,7 +1124,11 @@ p {
 }
 
 .hero-copy,
+.home-hero-copy,
 .hero-panel,
+.home-hero-visual,
+.profile-card,
+.resume-summary-panel,
 .bento-box,
 .project-card,
 .surface-card,
@@ -968,6 +1151,10 @@ p {
 
 @media (max-width: 900px) {
   .hero,
+  .home-hero,
+  .about-hero,
+  .resume-hero,
+  .about-layout,
   .two-column,
   .section-heading,
   .bento-grid,
@@ -977,6 +1164,14 @@ p {
   .theme-pair-grid,
   .theme-pair-swatches,
   .resume-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-copy {
+    min-height: auto;
+  }
+
+  .empty-feature {
     grid-template-columns: 1fr;
   }
 
@@ -1012,7 +1207,11 @@ p {
   }
 
   .hero-copy,
+  .home-hero-copy,
   .hero-panel,
+  .home-hero-visual,
+  .profile-card,
+  .resume-summary-panel,
   .bento-box,
   .surface-card,
   .project-card,

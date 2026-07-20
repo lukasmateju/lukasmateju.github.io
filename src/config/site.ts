@@ -41,8 +41,8 @@ export const pageSettings: PageSettings[] = [
     href: "/projects",
     title: "Projects | Lukas Mateju",
     description: "Selected projects and coursework by Lukas Mateju.",
-    published: false,
-    showInNav: false,
+    published: true,
+    showInNav: true,
     navOrder: 1
   },
   {
@@ -51,8 +51,8 @@ export const pageSettings: PageSettings[] = [
     href: "/about",
     title: "About | Lukas Mateju",
     description: "Background and interests for Lukas Mateju.",
-    published: false,
-    showInNav: false,
+    published: true,
+    showInNav: true,
     navOrder: 2
   },
   {
@@ -72,7 +72,7 @@ export const pageSettings: PageSettings[] = [
     title: "Style Lab | Lukas Mateju",
     description: "Temporary theme exploration page for the portfolio.",
     published: true,
-    showInNav: true,
+    showInNav: false,
     navOrder: 4
   }
 ];
