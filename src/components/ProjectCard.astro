@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { project, compact = false } = Astro.props as Props;
-const { data, slug } = project;
+const { data } = project;
 ---
 
 <article class:list={["project-card", { compact }]}>
@@ -17,7 +17,7 @@ const { data, slug } = project;
       {data.timeline && <span>{data.timeline}</span>}
     </p>
     <h3>
-      <a href={`/projects/${slug}`}>{data.title}</a>
+      <a href={`/projects/${project.id}`}>{data.title}</a>
     </h3>
   </div>
 

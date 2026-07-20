@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { isProjectPublished } from "../../lib/projects";
 
@@ -7,7 +7,7 @@ export async function getStaticPaths() {
   const projects = await getCollection("projects");
 
   return projects.filter(isProjectPublished).map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id },
     props: { project }
   }));
 }
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const { project } = Astro.props as Props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 const links = project.data.links ?? {};
 ---
 
