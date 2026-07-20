@@ -1,5 +1,5 @@
-# lukasmateju.github.io
-Personal repository for my E-Portfolio website displaying my experience, projects, and personal information
+# lukasmateju.com
+Source repository for lukasmateju.com, an e-portfolio website displaying my experience, projects, background, and resume.
 
 ## Local Setup
 
@@ -22,14 +22,14 @@ Temporary design exploration lives at `/style-lab`.
 
 Asset planning lives in `docs/asset-checklist.md`.
 
-## Custom Domain
+## Domain
 
 The production domain is `lukasmateju.com`.
 
 In GitHub, go to `Settings > Pages` and set:
 
 - Source: `GitHub Actions`
-- Custom domain: `lukasmateju.com`
+- Domain: `lukasmateju.com`
 - Enforce HTTPS: enabled after GitHub finishes provisioning the certificate
 
 In Cloudflare DNS, configure:
